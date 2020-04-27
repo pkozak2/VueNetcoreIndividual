@@ -1,7 +1,47 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <div class="home">
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <HelloWorld msg="Welcome to Your Vue.js App" />
+    </div>
+    <div>
+      <ul>
+        <li>
+          <a href="https://get.asp.net/">ASP.NET Core</a> and
+          <a href="https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx">C#</a> for cross-platform server-side code
+        </li>
+        <li>
+          <a href="https://vuejs.org/">Vue.js</a> for client-side code
+        </li>
+        <li>
+          <a href="http://getbootstrap.com/">Bootstrap</a> for layout and styling
+        </li>
+      </ul>
+      <p>To help you get started, we've also set up:</p>
+      <ul>
+        <li>
+          <strong>Client-side navigation</strong>. For example, click
+          <em>Counter</em> then
+          <em>Back</em> to return here.
+        </li>
+        <li>
+          <strong>Vue.js CLI integration</strong>. In development mode, there's no need to run
+          <code>vue-cli-service serve serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.
+        </li>
+        <li>
+          <strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your
+          <code>dotnet publish</code> configuration automatically invokes
+          <code>vue-cli-service build</code> to produce minified, ahead-of-time compiled JavaScript files.
+        </li>
+      </ul>
+      <p>
+        The
+        <code>ClientApp</code> subdirectory is a standard Vue.js CLI application. If you open a command prompt in that directory, you can run any
+        <code>vue-cli-service</code> command (e.g.,
+        <code>vue-cli-service serve</code>), or use
+        <code>npm</code> to install extra packages into it.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -16,3 +56,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+.home {
+  text-align: center;
+}
+</style>
