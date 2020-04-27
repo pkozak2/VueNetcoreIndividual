@@ -1,7 +1,9 @@
 export const ApplicationName = "auth";
 
+export const ReturnUrlType = 'returnUrl';
+
 export const QueryParameterNames = {
-  ReturnUrl: "returnUrl",
+  ReturnUrl: ReturnUrlType,
   Message: "message"
 };
 
