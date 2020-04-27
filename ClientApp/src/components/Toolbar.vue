@@ -3,26 +3,42 @@
     class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
   >
     <div class="container">
-      <router-link class="navbar-brand" :to="{ name: 'Home' }">authVue</router-link>
-      <button class="navbar-toggler" type="button" aria-label="Toggle navigation" @click="toggle">
+      <router-link class="navbar-brand" :to="{ name: 'Home' }"
+        >authVue</router-link
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        aria-label="Toggle navigation"
+        @click="toggle"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div
         class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
         :class="{ show: expanded }"
       >
+        <LoginMenu></LoginMenu>
         <ul class="navbar-nav flex-grow">
           <li class="nav-item">
-            <router-link class="nav-link text-dark" :to="{ name: 'Home' }">Home</router-link>
+            <router-link class="nav-link text-dark" :to="{ name: 'Home' }"
+              >Home</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-dark" :to="{ name: 'Counter' }">Counter</router-link>
+            <router-link class="nav-link text-dark" :to="{ name: 'Counter' }"
+              >Counter</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-dark" :to="{name: 'FetchData'}">Fetch data</router-link>
+            <router-link class="nav-link text-dark" :to="{ name: 'FetchData' }"
+              >Fetch data</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-dark" :to="{name:'About'}">About</router-link>
+            <router-link class="nav-link text-dark" :to="{ name: 'About' }"
+              >About</router-link
+            >
           </li>
         </ul>
       </div>
@@ -30,8 +46,10 @@
   </nav>
 </template>
 <script>
+import LoginMenu from "./api-authorization/LoginMenu";
 export default {
   name: "Toolbar",
+  components: { LoginMenu },
   data() {
     return {
       expanded: false
