@@ -30,7 +30,6 @@ export default {
         this.login(this.getReturnUrl());
         break;
       case LoginActions.LoginCallback:
-        debugger;
         this.message = "Processing login callback";
         this.processLoginCallback();
         break;
@@ -89,7 +88,6 @@ export default {
       }
     },
     getReturnUrl(state) {
-      debugger;
       const params = new URLSearchParams(window.location.search);
       const fromQuery = params.get(ReturnUrlType);
       if (fromQuery && !fromQuery.startsWith(`${window.location.origin}/`)) {

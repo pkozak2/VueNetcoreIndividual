@@ -43,7 +43,6 @@ export default {
         authorizeService.isAuthenticated(),
         authorizeService.getUser()
       ]);
-      //debugger;
       this.isAuthenticated = isAuthenticated;
       this.userName = user && user.name;
     }

@@ -23,7 +23,6 @@ export default {
   },
   mounted() {
     const action = this.action;
-    debugger;
     switch (action) {
       case LogoutActions.Logout:
         if (window.history.state.state.local) {
@@ -47,7 +46,6 @@ export default {
   },
   methods: {
     getReturnUrl(state) {
-      debugger;
       const params = new URLSearchParams(window.location.search);
       const fromQuery = params.get(ReturnUrlType);
       if (fromQuery && !fromQuery.startsWith(`${window.location.origin}/`)) {
