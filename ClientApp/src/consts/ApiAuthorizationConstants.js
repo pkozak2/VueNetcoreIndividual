@@ -1,6 +1,6 @@
 export const ApplicationName = "auth";
 
-export const ReturnUrlType = 'returnUrl';
+export const ReturnUrlType = "returnUrl";
 
 export const QueryParameterNames = {
   ReturnUrl: ReturnUrlType,
@@ -22,8 +22,8 @@ export const LoginActions = {
 };
 
 const prefix = "/authentication";
-const login = "/login"
-const logout = "/logout"
+const login = "/login";
+const logout = "/logout";
 
 export const ApplicationPaths = {
   DefaultLoginRedirectPath: "/",

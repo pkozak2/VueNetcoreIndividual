@@ -12,14 +12,16 @@
       <li class="nav-item">
         <router-link
           class="nav-link text-dark"
-          :to="{name: 'Login', params: {action: 'register'}}"
-        >Register</router-link>
+          :to="{ name: 'Login', params: { action: 'register' } }"
+          >Register</router-link
+        >
       </li>
       <li class="nav-item">
         <router-link
           class="nav-link text-dark"
-          :to="{name: 'Login', params: {action: 'login'}}"
-        >Login</router-link>
+          :to="{ name: 'Login', params: { action: 'login' } }"
+          >Login</router-link
+        >
       </li>
     </ul>
   </div>

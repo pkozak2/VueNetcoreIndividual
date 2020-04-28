@@ -8,7 +8,11 @@
       <em>Loading...</em>
     </p>
 
-    <table class="table table-striped" aria-labelledby="tableLabel" v-if="forecasts[0]">
+    <table
+      class="table table-striped"
+      aria-labelledby="tableLabel"
+      v-if="forecasts[0]"
+    >
       <thead>
         <tr>
           <th>Date</th>
