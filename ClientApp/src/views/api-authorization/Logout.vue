@@ -1,9 +1,8 @@
 <template>
-  <div>{{message}} | {{action}}</div>
+  <div>{{ message }} | {{ action }}</div>
 </template>
 <script>
 import {
-  QueryParameterNames,
   LogoutActions,
   ApplicationPaths,
   ReturnUrlType
@@ -27,7 +26,8 @@ export default {
     debugger;
     switch (action) {
       case LogoutActions.Logout:
-        if (!!window.history.state.state.local) {
+        if (window.history.state.state.local) {
+          this.message = "Processing logout";
           this.logout(this.getReturnUrl());
         } else {
           // This prevents regular links to <app>/authentication/logout from triggering a logout
@@ -35,6 +35,7 @@ export default {
         }
         break;
       case LogoutActions.LogoutCallback:
+        this.message = "Processing logout callback";
         this.processLogoutCallback();
         break;
       case LogoutActions.LoggedOut:

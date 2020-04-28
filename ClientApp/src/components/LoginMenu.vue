@@ -10,10 +10,16 @@
     </ul>
     <ul class="navbar-nav" v-if="!isAuthenticated">
       <li class="nav-item">
-        <a class="nav-link text-dark">Register</a>
+        <router-link
+          class="nav-link text-dark"
+          :to="{name: 'Login', params: {action: 'register'}}"
+        >Register</router-link>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark">Login</a>
+        <router-link
+          class="nav-link text-dark"
+          :to="{name: 'Login', params: {action: 'login'}}"
+        >Login</router-link>
       </li>
     </ul>
   </div>
@@ -37,6 +43,7 @@ export default {
         authorizeService.isAuthenticated(),
         authorizeService.getUser()
       ]);
+      //debugger;
       this.isAuthenticated = isAuthenticated;
       this.userName = user && user.name;
     }

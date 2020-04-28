@@ -31,9 +31,15 @@ const routes = [
     component: importView("About")
   },
   {
-    path: "/authorization/logout/:action",
+    path: "/authentication/logout/:action",
+    name: "Logout",
     props: true,
     component: importView("api-authorization/Logout"),
+  }, {
+    path: "/authentication/login/:action",
+    name: "Login",
+    props: true,
+    component: importView("api-authorization/Login"),
   }
 ];
 
