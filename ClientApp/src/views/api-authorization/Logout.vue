@@ -1,5 +1,5 @@
 <template>
-  <div>{{ message }} | {{ action }}</div>
+  <div>{{ message }}</div>
 </template>
 <script>
 import {
