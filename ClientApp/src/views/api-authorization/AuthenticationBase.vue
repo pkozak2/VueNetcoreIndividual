@@ -2,6 +2,7 @@
   <component :is="mainComponent" v-bind="{ action }"></component>
 </template>
 <script>
+import Vue from "vue";
 import {
   LoginActions,
   LogoutActions
@@ -9,7 +10,7 @@ import {
 import Login from "./Login";
 import Logout from "./Logout";
 export default {
-  name: "authenticationBase",
+  name: "AuthenticationBase",
   props: {
     action: { type: String, required: true }
   },
@@ -22,7 +23,7 @@ export default {
       if (this.isAction(LogoutActions)) {
         return Logout;
       }
-      return new Component();
+      return Vue.Component();
     }
   },
   methods: {
