@@ -2,26 +2,30 @@
   <div>
     <ul class="navbar-nav" v-if="isAuthenticated">
       <li class="nav-item">
-        <a class="nav-link text-dark" title="Manage">Hello {{ userName }}</a>
+        <router-link
+          class="nav-link text-dark"
+          :to="{name: 'Authentication', params: { action: 'profile' }}"
+        >Hello {{ userName }}</router-link>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" title="Logout">Logout</a>
+        <router-link
+          class="nav-link text-dark"
+          :to="{name: 'Authentication', params: { action: 'logout' }}"
+        >Logout</router-link>
       </li>
     </ul>
     <ul class="navbar-nav" v-if="!isAuthenticated">
       <li class="nav-item">
         <router-link
           class="nav-link text-dark"
-          :to="{ name: 'Login', params: { action: 'register' } }"
-          >Register</router-link
-        >
+          :to="{ name: 'Authentication', params: { action: 'register' } }"
+        >Register</router-link>
       </li>
       <li class="nav-item">
         <router-link
           class="nav-link text-dark"
-          :to="{ name: 'Login', params: { action: 'login' } }"
-          >Login</router-link
-        >
+          :to="{ name: 'Authentication', params: { action: 'login' } }"
+        >Login</router-link>
       </li>
     </ul>
   </div>

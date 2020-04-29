@@ -25,7 +25,7 @@ export default {
     const action = this.action;
     switch (action) {
       case LogoutActions.Logout:
-        if (window.history.state.state.local) {
+        if (window.history.state.key) {
           this.message = "Processing logout";
           this.logout(this.getReturnUrl());
         } else {

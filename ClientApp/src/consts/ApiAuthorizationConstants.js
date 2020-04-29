@@ -22,21 +22,19 @@ export const LoginActions = {
 };
 
 const prefix = "/authentication";
-const login = "/login";
-const logout = "/logout";
 
 export const ApplicationPaths = {
   DefaultLoginRedirectPath: "/",
   ApiAuthorizationClientConfigurationUrl: `/_configuration/${ApplicationName}`,
   ApiAuthorizationPrefix: prefix,
-  Login: `${prefix}/${login}/${LoginActions.Login}`,
-  LoginFailed: `${prefix}/${login}/${LoginActions.LoginFailed}`,
-  LoginCallback: `${prefix}/${login}/${LoginActions.LoginCallback}`,
-  Register: `${prefix}/${login}/${LoginActions.Register}`,
-  Profile: `${prefix}/${login}/${LoginActions.Profile}`,
-  LogOut: `${prefix}/${logout}/${LogoutActions.Logout}`,
-  LoggedOut: `${prefix}/${logout}/${LogoutActions.LoggedOut}`,
-  LogOutCallback: `${prefix}/${logout}/${LogoutActions.LogoutCallback}`,
+  Login: `${prefix}/${LoginActions.Login}`,
+  LoginFailed: `${prefix}/${LoginActions.LoginFailed}`,
+  LoginCallback: `${prefix}/${LoginActions.LoginCallback}`,
+  Register: `${prefix}/${LoginActions.Register}`,
+  Profile: `${prefix}/${LoginActions.Profile}`,
+  LogOut: `${prefix}/${LogoutActions.Logout}`,
+  LoggedOut: `${prefix}/${LogoutActions.LoggedOut}`,
+  LogOutCallback: `${prefix}/${LogoutActions.LogoutCallback}`,
   IdentityRegisterPath: "/Identity/Account/Register",
   IdentityManagePath: "/Identity/Account/Manage"
 };
