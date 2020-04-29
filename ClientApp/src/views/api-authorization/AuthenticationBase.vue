@@ -2,19 +2,18 @@
   <component :is="mainComponent" v-bind="{ action }"></component>
 </template>
 <script>
-import Vue from "vue";
 import {
   LoginActions,
   LogoutActions
 } from "../../consts/ApiAuthorizationConstants";
 import Login from "./Login";
 import Logout from "./Logout";
+import WrongAction from "./WrongAction";
 export default {
   name: "AuthenticationBase",
   props: {
     action: { type: String, required: true }
   },
-  components: { Login, Logout },
   computed: {
     mainComponent() {
       if (this.isAction(LoginActions)) {
@@ -23,7 +22,7 @@ export default {
       if (this.isAction(LogoutActions)) {
         return Logout;
       }
-      return Vue.Component();
+      return WrongAction;
     }
   },
   methods: {
