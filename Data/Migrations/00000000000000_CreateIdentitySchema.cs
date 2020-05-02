@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace auth.Data.Migrations
+namespace VueIndividual.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace auth
+namespace VueIndividual
 {
     public class WeatherForecast
     {

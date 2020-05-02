@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace auth.Controllers
+namespace VueIndividual.Controllers
 {
     public class OidcConfigurationController : Controller
     {

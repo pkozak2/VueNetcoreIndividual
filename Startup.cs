@@ -6,15 +6,15 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
-using auth.Data;
-using auth.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using VueCliMiddleware;
 using Microsoft.AspNetCore.SpaServices;
+using VueIndividual.Data;
+using VueIndividual.Models;
 
-namespace auth
+namespace VueIndividual
 {
     public class Startup
     {
